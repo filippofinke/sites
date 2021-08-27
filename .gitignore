@@ -1,0 +1,5 @@
+/node_modules
+/sites/*
+!/sites/default
+/tmp
+.env
