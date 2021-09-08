@@ -5,6 +5,7 @@ const fileUpload = require("express-fileupload");
 const fetch = require("node-fetch");
 const path = require("path");
 const fs = require("fs");
+const morgan = require("morgan");
 const AdmZip = require("adm-zip");
 
 process.env.PORT = process.env.PORT || 8080;
@@ -19,19 +20,7 @@ if (!process.env.ZONE_ID || !process.env.TOKEN || !process.env.DOMAIN) {
 
 const app = express();
 
-app.use((req, res, next) => {
-	res.on("close", () => {
-		console.log(
-			new Date().toLocaleString(),
-			"|",
-			req.method,
-			req.hostname,
-			req.path,
-			res.statusCode
-		);
-	});
-	next();
-});
+app.use(morgan("common"));
 
 app.use(
 	fileUpload({
