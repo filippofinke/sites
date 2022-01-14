@@ -2,7 +2,12 @@
 
 > Drag & Drop. It's online. HTML, JS and CSS
 
-### 🏠 [Homepage](https://sites.filippofinke.ch)
+<details>
+ <summary>Demo</summary>
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/37296364/149595817-d158efa4-8d9a-48e5-9f59-ed7408d6221d.gif">
+</p>
+</details>
 
 ## Install
 
